@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第三页 · 电脑里的文件结构与内容 - AI 员工实战教学</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 顶部导航栏 -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-badge">CHAPTER 03</span>
+        <span>AI 员工转化与实战全景录</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">首页·目录导览</a></li>
+        <li><a href="page1_story.html" class="nav-link">① 真实员工故事</a></li>
+        <li><a href="page2_mapping.html" class="nav-link">② 真人到 AI 映射</a></li>
+        <li><a href="page3_architecture.html" class="nav-link active">③ 电脑里文件结构</a></li>
+        <li><a href="page4_lifecycle.html" class="nav-link">④ 完整运行生命周期</a></li>
+        <li><a href="page5_skills_prompts.html" class="nav-link">⑤ 技能全貌与提示词</a></li>
+        <li><a href="page6_new_employee.html" class="nav-link">⑥ 搭建新 AI 员工</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main-wrapper">
+    <!-- Hero 标题 -->
+    <div class="hero-box">
+      <div class="chapter-badge">第三篇 · 磁盘物理架构</div>
+      <h1 class="hero-title">电脑里的 AI 员工：文件、目录与结构全解</h1>
+      <p class="hero-subtitle">
+        AI 员工在物理电脑中不是一段虚无缥缈的代码，而是一套严密组织的文件系统。本篇全面拆解各目录、核心手册的目的、内容与设计玄机。
+      </p>
+    </div>
+
+    <!-- 目录全景树 -->
+    <section>
+      <h2 class="section-title">📂 磁盘目录全景架构树</h2>
+      <div class="code-container">
+        <div class="code-header">
+          <span>AI 员工工作区真实物理目录 (/Users/ljy919/Desktop/222)</span>
+          <button class="copy-btn" data-target="code-tree">📋 复制目录树</button>
+        </div>
+        <pre><code id="code-tree">/Users/ljy919/Desktop/222/
+├── .agents/skills/ai-employee-setup/       # 【技能脚手架】Codex / Agent 自动化搭建技能
+│   └── SKILL.md                            # 技能核心指令：扫描 -> 精准3问 -> 一页计划 -> 自动建四手册
+│
+└── ai_employee_office/                     # 🏢 【AI 员工专属办公室目录】
+    ├── 01_入职手册.md                      # 【底线红线】品牌背景、Voice & Tone、负向违禁词库
+    ├── 02_员工设定.md                      # 【角色心智】姓名小晴、思考协议、自检纪律、交互规范
+    ├── 03_工作手册_新品发布SOP.md           # 【作业程序】5步作业法、三渠道标准模板、数据比对表
+    ├── 04_错题本.md                        # 【自进化记忆】表格结构纠偏日志、E001-E006避坑规则
+    ├── 一页检查清单_Checklist.md            # 【质检把关】15项标准审核项（高亮第14条人工必验）
+    ├── run_ai_employee.py                  # 【本地工具】Python自动化复核脚本（秒验违禁词与数据比对）
+    │
+    ├── 原始资料/                           # 📥 【输入源目录】业务原始资料（杜绝污染系统手册）
+    │   ├── 01_品牌介绍与调性规范.md         # 品牌理念、目标受众、工艺术语表
+    │   ├── 02_往期优秀文案参考_第10期.md    # 往期高赞范本（为大模型提供质量锚点）
+    │   └── 03_本周待处理数据_第11期新品.md  # 当周采购部给的生硬表格与原始参数
+    │
+    └── 输出成果/                           # 📤 【交付物目录】生产成果归档区
+        └── 第11期_新品宣发文案终稿.md       # 最终交付的三渠道终稿与1:1数据自检报告</code></pre>
+      </div>
+    </section>
+
+    <!-- 逐一拆解核心文件 -->
+    <section>
+      <h2 class="section-title">🔍 逐一拆解：四大核心文件的目的与内容</h2>
+
+      <!-- 选项卡切换 -->
+      <div class="tabs-header">
+        <button class="tab-btn active" data-tab="arch-hb1">01_入职手册.md</button>
+        <button class="tab-btn" data-tab="arch-hb2">02_员工设定.md</button>
+        <button class="tab-btn" data-tab="arch-hb3">03_工作手册_SOP.md</button>
+        <button class="tab-btn" data-tab="arch-hb4">04_错题本.md</button>
+      </div>
+
+      <!-- Tab 1: 入职手册 -->
+      <div id="arch-hb1" class="tab-pane active">
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="card-title" style="color: var(--accent-red);">📌 目的与设计初衷</h3>
+            <p class="card-text">
+              <strong>为什么需要它</strong>：大模型通病是自作主张、满嘴网梗。没有入职手册，AI 就会自由发挥。<br><br>
+              <strong>核心职责</strong>：<br>
+              1. 树立东方极简、自然温润的语调（Voice & Tone）；<br>
+              2. <strong>物理级锁死红线</strong>：严禁出现“绝绝子/家人们/按头安利”等黑名单词汇；<br>
+              3. 严控标点符号：全文感叹号累计不能超过 2 个；<br>
+              4. 规范工艺术语：如“北美 FAS 级黑胡桃木整木切削”。
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">📄 核心内容截选</h3>
+            <pre><code style="font-size: 0.85rem;">## 三、品牌绝对红线与禁忌词库（Red Lines）
+1. 绝对禁止网络烂梗：绝绝子、家人们、冲鸭、暴风吸入
+2. 绝对禁止虚假夸大：全网第一、天花板、神器
+3. 标点限制：全文感叹号（！）累计不得超过 2 个
+4. 价格透明：必须同时标注日常原价与首发活动价</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: 员工设定 -->
+      <div id="arch-hb2" class="tab-pane">
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="card-title" style="color: var(--accent-blue);">📌 目的与设计初衷</h3>
+            <p class="card-text">
+              <strong>为什么需要它</strong>：给大模型赋予人格与“行为纪律”。<br><br>
+              <strong>核心职责</strong>：<br>
+              1. 命名为“小晴”，定位为新媒体文案专员，确立谦逊专业的交互风格；<br>
+              2. <strong>规定思考协议（Thought Protocol）</strong>：明确在接手任务后，<strong>第一步必须先读《04_错题本》</strong>；<br>
+              3. 规定交付纪律：文末必须附带数据比对自检表，主动向主管自证清白。
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">📄 核心内容截选</h3>
+            <pre><code style="font-size: 0.85rem;">## 二、工作心智与行动准则
+1. 先查错题，再行动：每次撰写前第一步必须通读《04_错题本.md》
+2. 严守 SOP 模板：严格遵循各渠道标准模板，不随意发挥
+3. 数据零容忍：数字、价格、日期保持极致严谨，绝不捏造
+4. 诚实自省汇报：文末附加【交付自检对照表】向管理者汇报</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: 工作手册 SOP -->
+      <div id="arch-hb3" class="tab-pane">
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="card-title" style="color: var(--accent-sage);">📌 目的与设计初衷</h3>
+            <p class="card-text">
+              <strong>为什么需要它</strong>：把人的经验转化为机器流水线，避免格式随机乱跳。<br><br>
+              <strong>核心职责</strong>：<br>
+              1. 规定 5 步标准作业法：解析 ➔ 查错题 ➔ 起草 ➔ 比对 ➔ 提交；<br>
+              2. <strong>固化三渠道交付模板</strong>：小红书（3标题+正文+规格清单）、微信公众号（主标题+摘要+散文导言）、企微社群（闪购通知体）；<br>
+              3. 制定标准的数据核对自检表格式。
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">📄 核心内容截选</h3>
+            <pre><code style="font-size: 0.85rem;">### 步骤 1：原始输入解析（提取品名、规格、价格、起止时间）
+### 步骤 2：错题本检索与禁忌排查（加载全部激活规避规则）
+### 步骤 3：多渠道标准化起草（套用小红书/微信/社群模板）
+### 步骤 4：数据 1:1 交叉核对（逐字比对原始数据）
+### 步骤 5：提交草稿与自检对照表</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 4: 错题本 -->
+      <div id="arch-hb4" class="tab-pane">
+        <div class="grid-2">
+          <div class="card">
+            <h3 class="card-title" style="color: var(--accent-warm);">📌 目的与设计初衷</h3>
+            <p class="card-text">
+              <strong>为什么需要它</strong>：这是整个体系的<strong>进化引擎</strong>！普通对话中主管的纠偏是一次性的，错题本让意见永久固化。<br><br>
+              <strong>核心职责</strong>：<br>
+              1. 采用结构化 Markdown 表格：序号、日期、渠道、反面错误、正向规范、主管原话；<br>
+              2. 充当动态 Few-shot 样本库；<br>
+              3. 每次执行前加载，永不踩同一坑；审阅后新教训自动追加（如实战中的 E005 和 E006）。
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="card-title">📄 核心内容截选</h3>
+            <pre><code style="font-size: 0.85rem;">| 序号 | 错误表现（反面案例） | 正确做法（操作规范） | 管理者原话与归因 |
+| E001 | 标题出现“绝绝子！” | 严禁网络梗，标题禁感叹号 | “晴川是温润自然的品牌” |
+| E002 | 仅标注特惠价漏写原价 | 必须同时展示原价与尝鲜价 | “不写原价顾客感觉无诚意” |
+| E005 | 小红书结尾提问太营销 | 改为询问晨间生活习惯 | “读者看重生活情境” |
+| E006 | 社群特惠未突出立省 | 必须加粗标注【立省 ¥XX】 | “老客户对省多少钱敏感” |</code></pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 为什么采用文件夹体系而非单个长提示词 -->
+    <section class="callout">
+      <div class="callout-title">💡 架构启示：为什么必须拆成多个物理文件？</div>
+      <p style="color: var(--text-secondary);">
+        1. <strong>关注点分离（Separation of Concerns）</strong>：调性归入职手册管、工序归 SOP 管、教训归错题本管。修改一处不影响全局；<br>
+        2. <strong>渐进式进化（Incremental Evolution）</strong>：日常运转时，你只需要修改《错题本》，其他手册保持稳定；<br>
+        3. <strong>真正的数字资产</strong>：这套文件夹可以复制、压缩、共享，换电脑、换工具、换员工，业务规矩永存。
+      </p>
+    </section>
+
+    <!-- 页面导航 -->
+    <div class="page-nav-bar">
+      <a href="page2_mapping.html" class="page-nav-btn">
+        <span>⬅ 上一篇：第二页 · 从真人到 AI 的映射转化</span>
+      </a>
+      <a href="page4_lifecycle.html" class="page-nav-btn primary">
+        <span>下一篇：第四页 · 完整生命周期运行实操</span>
+        <span>➔</span>
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>AI 员工实战全景录 · 第三页：电脑里的文件结构与内容 · 2026</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

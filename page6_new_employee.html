@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第六页 · 利用技能搭建全新 AI 员工 - AI 员工实战教学</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 顶部导航栏 -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-badge">CHAPTER 06</span>
+        <span>AI 员工转化与实战全景录</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">首页·目录导览</a></li>
+        <li><a href="page1_story.html" class="nav-link">① 真实员工故事</a></li>
+        <li><a href="page2_mapping.html" class="nav-link">② 真人到 AI 映射</a></li>
+        <li><a href="page3_architecture.html" class="nav-link">③ 电脑里文件结构</a></li>
+        <li><a href="page4_lifecycle.html" class="nav-link">④ 完整运行生命周期</a></li>
+        <li><a href="page5_skills_prompts.html" class="nav-link">⑤ 技能全貌与提示词</a></li>
+        <li><a href="page6_new_employee.html" class="nav-link active">⑥ 搭建新 AI 员工</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main-wrapper">
+    <!-- Hero 标题 -->
+    <div class="hero-box">
+      <div class="chapter-badge">第六篇 · 全新员工孵化流水线</div>
+      <h1 class="hero-title">利用技能实现新的 AI 员工：流水线实战全流程</h1>
+      <p class="hero-subtitle">
+        手把手带你通过 <code>$ai-employee-setup</code> 技能，将任意一项高频重复业务转化为全新的专属 AI 员工。全景拆解“物料准备 ➔ 流水线提示词 ➔ 技能后台运作 ➔ 阶段输出交付物 ➔ 自检执行”的标准化流水线。
+      </p>
+    </div>
+
+    <!-- 模块一：全景流水线全览 -->
+    <section style="margin-bottom: 48px;">
+      <h2 class="section-title">🏭 模块一：AI 员工工业化装配流水线</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 24px;">
+        搭建一个新 AI 员工不再依赖玄学写提示词，而是像现代工厂流水线一样，分工明确、阶段清晰、步步有输入且有交付物：
+      </p>
+
+      <div class="grid-4" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+        <div class="card" style="border-top: 4px solid var(--accent-sage);">
+          <div class="timeline-time">阶段 0 · 前置储备</div>
+          <div class="card-title" style="font-size: 1.1rem;">准备原材料与办公室</div>
+          <p class="card-text">建立专属文件夹，准备品牌规范、历史优秀样本与当期生数据。</p>
+        </div>
+
+        <div class="card" style="border-top: 4px solid var(--accent-blue);">
+          <div class="timeline-time">阶段 1 · 扫描与诊断</div>
+          <div class="card-title" style="font-size: 1.1rem;">输入提示词 1 ➔ 计划</div>
+          <p class="card-text">调用技能自动扫描资料，提问 ≤3 题，生成精简的一页实施计划。</p>
+        </div>
+
+        <div class="card" style="border-top: 4px solid var(--accent-purple);">
+          <div class="timeline-time">阶段 2 · 确认与落地</div>
+          <div class="card-title" style="font-size: 1.1rem;">输入提示词 2 ➔ 四本手册</div>
+          <p class="card-text">回复 OK 或补充偏好，技能自动在电脑中创建四本核心规范手册。</p>
+        </div>
+
+        <div class="card" style="border-top: 4px solid var(--accent-warm);">
+          <div class="timeline-time">阶段 3 · 日常执行与进化</div>
+          <div class="card-title" style="font-size: 1.1rem;">输入任务 ➔ 1:1 自检核对</div>
+          <p class="card-text">日常接单必读错题本，输出成果并附带比对表；审阅意见回流沉淀。</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 模块二：为了实现输出而必须准备的东西 -->
+    <section style="margin-bottom: 48px;">
+      <h2 class="section-title">📦 模块二：为了实现输出——必须准备的前置物料清单</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 20px;">
+        AI 员工不可能“凭空创造”。要让流水线顺畅输出高质量成果，必须在电脑里准备好以下 <strong>4 类基础物料与 1 个工作环境</strong>：
+      </p>
+
+      <div class="story-narrative" style="padding: 28px;">
+        <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 16px;">
+          💻 电脑文件夹准备标准架构（以新员工“智研周报助理”为例）
+        </h3>
+        
+        <div class="code-container" style="margin: 12px 0 20px;">
+          <div class="code-header">
+            <span>文件目录树状规划</span>
+          </div>
+          <pre><code>📁 my_ai_employee_office/               <-- 1. 专属工作文件夹（AI 办公室）
+ ├── 📁 原始资料/
+ │    ├── 01_业务背景与分析规范.md         <-- 2. 业务规范与红线（指导思想）
+ │    ├── 02_往期优秀研报样例_第08期.md     <-- 3. 历史优秀成品（质量基准线）
+ │    └── 03_本期待处理动态与生数据.md      <-- 4. 当期真实原材料（加工对象）
+ └── 📄 一页检查清单_Checklist.md          <-- 5. 审核标准表（最后一道安全阀）</code></pre>
+        </div>
+
+        <div class="grid-2" style="margin-top: 20px;">
+          <div class="card" style="background-color: var(--bg-subtle);">
+            <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 8px;">物料 1：业务背景与底线规范</h4>
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">
+              <strong>作用</strong>：充当新员工的“入职培训教材”。必须明确你的组织定位、目标受众画像、语言语气（严肃沉稳/活泼亲和）、以及<strong>绝对禁止事项与黑名单词库</strong>（如严禁主观无根据臆断、严禁虚假极致词）。
+            </p>
+          </div>
+          <div class="card" style="background-color: var(--bg-subtle);">
+            <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 8px;">物料 2：往期优秀成品范本（1~2 份）</h4>
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">
+              <strong>作用</strong>：设立 AI 的“模仿天花板”。给 AI 看过往被主管赞扬过的标杆成果（包含结构、排版、用词深度）。AI 是模仿大师，没有范本它就只能凭通用预训练概率猜测。
+            </p>
+          </div>
+          <div class="card" style="background-color: var(--bg-subtle);">
+            <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 8px;">物料 3：当期真实待处理数据</h4>
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">
+              <strong>作用</strong>：本周需要被加工的生硬原材料。可以是会议记录速记、供应商产品报价单、行业融资动态列表、或是运营后台导出的原始数据。
+            </p>
+          </div>
+          <div class="card" style="background-color: var(--bg-subtle);">
+            <h4 style="font-size: 1.05rem; font-weight: 700; margin-bottom: 8px;">物料 4：一页检查清单（Checklist）</h4>
+            <p style="font-size: 0.92rem; color: var(--text-secondary);">
+              <strong>作用</strong>：贯穿全流程的“防空警报”。特别是清单中的<strong>第 14 条（关键数据、日期与金额 1:1 人工核对）</strong>和<strong>第 15 条（意见回流写入错题本）</strong>。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 模块三：流水线逐级实战全演练 -->
+    <section style="margin-bottom: 48px;">
+      <h2 class="section-title">🚀 模块三：流水线实操全景演练（Prompt ➔ 运作 ➔ 交付物）</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 24px;">
+        以孵化全新 AI 员工<strong>「小研（Q研）· 行业深度动态周萃专员」</strong>为例，完整展示流水线每一工位的输入、技能后台运作逻辑与交付产物：
+      </p>
+
+      <!-- 工位 1 -->
+      <div class="story-narrative" style="border-left: 4px solid var(--accent-blue); margin-bottom: 32px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+          <span class="badge badge-blue">流水线工位 1</span>
+          <span style="font-size: 0.88rem; color: var(--text-muted);">耗时约 1 分钟</span>
+        </div>
+        <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 8px;">
+          步骤一：扫描分析与诊断计划（Scan & Diagnostic Plan）
+        </h3>
+        <p style="color: var(--text-secondary); margin-bottom: 16px;">
+          向已经配置好 <code>ai-employee-setup</code> 技能的环境（或在网页端）输入初始化指令。
+        </p>
+
+        <!-- 输入提示词 -->
+        <div class="code-container">
+          <div class="code-header">
+            <span>📥 工位 1 输入提示词（Input Prompt）</span>
+            <button class="copy-btn" data-target="pipeline-prompt-1">📋 复制提示词</button>
+          </div>
+          <pre><code id="pipeline-prompt-1">使用 $ai-employee-setup，读目前资料夹，帮我建一个 AI 员工，把我的一件重复工作交给它。
+请先读取我当前工作目录中的业务背景与历史资料，梳理流程，向我提出最多 3 个最关键的问题，并输出一份一页计划。</code></pre>
+        </div>
+
+        <!-- 技能后台运作机制 -->
+        <div style="background-color: var(--accent-blue-light); border-radius: var(--radius-sm); padding: 14px 18px; margin: 16px 0; color: #1e3a8a; font-size: 0.93rem;">
+          ⚙️ <strong>技能后台运作</strong>：扫描工作区 ➔ 解析背景文件、往期成品与本周数据 ➔ 抽象业务输入/输出闭环 ➔ 发现未明确之处并提出 ≤3 个断点问题 ➔ 输出包含员工定位与四本手册蓝图的一页计划。
+        </div>
+
+        <!-- 输出交付物 -->
+        <div class="code-container">
+          <div class="code-header">
+            <span>📤 工位 1 输出交付物（Output Deliverables）</span>
+          </div>
+          <pre><code>### 一、业务流程与现状梳理
+1. 输入源：每周生数据（5条投融资事件、3项大模型技术突破、行业政策简报）。
+2. 输出物：小红书行业动态卡片、微信公众号深度解读推文、社群高管晨读闪讯。
+3. 业务红线：严禁无根据预测估值，严禁夸张情绪化标题，数据必须标明出处与币种。
+
+### 二、需向您确认的 3 个关键问题
+1. [交付偏好]：三渠道是同时发出，还是公众号先行、社群小红书跟进？（推荐：同步）
+2. [深度要求]：技术突破段落需要偏向学术代码级，还是商业落地级？（推荐：商业落地级）
+3. [排版底线]：对于研报字数，是否有硬性上限限制？（推荐：精炼在 1200 字内）
+
+### 三、AI 员工构建一页计划（One-Page Plan）
+• 员工定位：小研（智研观策·行业动态研究助理），汇报给研究总监。
+• 入职手册：专业克制、客观中立，严禁使用“颠覆”、“史诗级暴涨”等浮夸词汇。
+• SOP 流程：生数据解析 ➔ 查错题本 ➔ 依模板起草 ➔ 核心数据 1:1 比对 ➔ 提交。
+• 错题本预置：估值币种必须明确（$ 或 ￥）、技术专有名词不得私造译名。
+
+🔔 确认提示：若方案满意，请回复“OK”，我将为您正式生成四本核心手册。</code></pre>
+        </div>
+      </div>
+
+      <!-- 工位 2 -->
+      <div class="story-narrative" style="border-left: 4px solid var(--accent-purple); margin-bottom: 32px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+          <span class="badge badge-purple">流水线工位 2</span>
+          <span style="font-size: 0.88rem; color: var(--text-muted);">耗时约 2 分钟</span>
+        </div>
+        <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 8px;">
+          步骤二：确认并落地生成四本核心手册（Scaffold 4 Handbooks）
+        </h3>
+        <p style="color: var(--text-secondary); margin-bottom: 16px;">
+          对一页计划表示认可，并附上答复，触发技能在电脑中落盘创建 4 本标准化资产文档。
+        </p>
+
+        <!-- 输入提示词 -->
+        <div class="code-container">
+          <div class="code-header">
+            <span>📥 工位 2 输入提示词（Input Prompt）</span>
+            <button class="copy-btn" data-target="pipeline-prompt-2">📋 复制提示词</button>
+          </div>
+          <pre><code id="pipeline-prompt-2">一页计划我已确认，按你的默认推荐方案执行。
+请立即为我完整输出这名 AI 员工的四本核心手册。请分别使用明确的 Markdown 代码块输出，并在当前工作区创建对应文件：
+
+1.《01_入职手册.md》：包含机构定位、研究调性、绝对禁止事项与禁用词库。
+2.《02_员工设定.md》：包含姓名、角色定位、思考链路（先查错题本）与汇报格式。
+3.《03_工作手册_SOP.md》：包含标准作业程序、三端交付模板与自检清单。
+4.《04_错题本.md》：包含结构化表格与初始预置的避坑要点。</code></pre>
+        </div>
+
+        <!-- 技能后台运作机制 -->
+        <div style="background-color: var(--accent-purple-light); border-radius: var(--radius-sm); padding: 14px 18px; margin: 16px 0; color: #581c87; font-size: 0.93rem;">
+          ⚙️ <strong>技能后台运作</strong>：提取方案共识与用户偏好 ➔ 将通用大模型能力约束进 4 份文档 ➔ 在终端中直接自动创建 <code>01_入职手册.md</code>、<code>02_员工设定.md</code>、<code>03_工作手册_SOP.md</code>、<code>04_错题本.md</code> 四个物理文件。
+        </div>
+
+        <!-- 输出交付物 -->
+        <div class="code-container">
+          <div class="code-header">
+            <span>📤 工位 2 输出交付物（在本地创建 4 本手册）</span>
+          </div>
+          <pre><code>✅ 已成功在当前工作区为您创建 4 本核心手册：
+  📄 01_入职手册.md  (包含研究机构调性、严谨客观原则、虚夸辞藻黑名单、金融术语表)
+  📄 02_员工设定.md  (确定角色为“小研”，强制设定：起草前必须检索错题本)
+  📄 03_工作手册_SOP.md (定义 5 步流水线，固化小红书、微信、社群三大格式输出模板)
+  📄 04_错题本.md   (预置 E001 币种缺失、E002 未标数据源、E003 标题党三条警示)
+
+🎉 恭喜！您的专属 AI 员工「小研」已正式入职就位！随时可以接单处理当期数据。</code></pre>
+        </div>
+      </div>
+
+      <!-- 工位 3 -->
+      <div class="story-narrative" style="border-left: 4px solid var(--accent-sage); margin-bottom: 32px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+          <span class="badge badge-green">流水线工位 3</span>
+          <span style="font-size: 0.88rem; color: var(--text-muted);">日常每周/每日执行</span>
+        </div>
+        <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 8px;">
+          步骤三：新员工日常接单运行（Daily Task Execution）
+        </h3>
+        <p style="color: var(--text-secondary); margin-bottom: 16px;">
+          把每周最新的零散生数据交给 AI 员工，AI 员工必须先读错题本，再按 SOP 起草并附带比对表。
+        </p>
+
+        <!-- 输入提示词 -->
+        <div class="code-container">
+          <div class="code-header">
+            <span>📥 工位 3 输入提示词（Input Prompt）</span>
+            <button class="copy-btn" data-target="pipeline-prompt-3">📋 复制提示词</button>
+          </div>
+          <pre><code id="pipeline-prompt-3">现在你正式作为【小研 - 智研观策行业研究助理】上岗工作。
+
+你的行为规则如下：
+1. 严格遵守你的《01_入职手册.md》调性与《02_员工设定.md》。
+2. 动手前第一步：必须完整通读《04_错题本.md》中的所有警示规则，声明本期要规避的错误。
+3. 严格遵循《03_工作手册_SOP.md》的标准流程与输出模板起草全渠道交付稿件。
+4. 交付时必须在文末附加【数据自检对照表】，对本期融资金额、估值、日期、来源出处进行 1:1 核对。
+
+本周需要处理的原始生数据已存放在《原始资料/03_本期待处理动态与生数据.md》，请立即执行并输出成果！</code></pre>
+        </div>
+
+        <!-- 输出交付物 -->
+        <div class="code-container">
+          <div class="code-header">
+            <span>📤 工位 3 输出交付物（高质量成品 + 第 14 条自检表）</span>
+          </div>
+          <pre><code># 智研观策第 14 期行业深度周萃（交付草稿）
+
+【执行员工】：小研（行业研究助理）
+【前置声明】：已检索《04_错题本》，本期重点落实：金额必须带货币符号、数据来源 100% 标注。
+
+[渠道 A：小红书图文核心亮点速览]
+[渠道 B：微信公众号深度剖析文章]
+[渠道 C：企业微信高管决策快报]
+
+--------------------------------------------------------------------------------
+【交付自检核对表（对照清单第 14 条·数据 1:1 比对）】
+- 融资事件 A：金额 $5000 万美元（与原表一致 ✅）
+- 技术指标 B：推理延迟降低 42%（与官方 Paper 一致 ✅）
+- 发布日期：2026年3月22日（周日）（与排期一致 ✅）
+- 感叹号统计：全文共 0 个（符合入职手册合规标准 ✅）</code></pre>
+        </div>
+      </div>
+
+      <!-- 工位 4 -->
+      <div class="story-narrative" style="border-left: 4px solid var(--accent-warm); margin-bottom: 32px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px;">
+          <span class="badge badge-amber">流水线工位 4</span>
+          <span style="font-size: 0.88rem; color: var(--text-muted);">审阅与持续进化</span>
+        </div>
+        <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 8px;">
+          步骤四：审阅指正与错题本回流（Feedback Loop & Evolution）
+        </h3>
+        <p style="color: var(--text-secondary); margin-bottom: 16px;">
+          主管审阅发现瑕疵时，把批注发给 AI。AI 不仅修改当前稿件，还会<strong>自动将教训沉淀进错题本</strong>。
+        </p>
+
+        <!-- 输入提示词 -->
+        <div class="code-container">
+          <div class="code-header">
+            <span>📥 工位 4 输入提示词（Input Prompt）</span>
+            <button class="copy-btn" data-target="pipeline-prompt-4">📋 复制提示词</button>
+          </div>
+          <pre><code id="pipeline-prompt-4">本周稿件整体严谨，核对表很清晰，但有两个细节需要修改：
+1. 公众号正文里把“具身智能”写成了缩写“Embodied AI”，我们读者习惯中文专有名词，正文必须使用“具身智能（Embodied AI）”全称。
+2. 社群快讯中每条动态之间没有空行，手机端阅读太密集，请在每条动态之间添加一个空行。
+
+请执行两件事：
+1. 修改稿件并重新输出终稿；
+2. 提取这两条教训，按照标准格式追加到《04_错题本.md》表格尾部。</code></pre>
+        </div>
+
+        <!-- 输出交付物 -->
+        <div class="code-container">
+          <div class="code-header">
+            <span>📤 工位 4 输出交付物（自我进化的成果）</span>
+          </div>
+          <pre><code>已完成修改并向《04_错题本.md》追加以下两条新规则：
+
+| 序号 | 记录日期 | 涉及渠道 | 错误表现 | 正确做法 | 管理者原话 | 状态 |
+| :---: | :---: | :---: | :--- | :--- | :--- | :---: |
+| E004 | 2026-03-22 | 公众号 | 滥用外文缩写 Embodied AI | 专业技术名词统一采用“中文全称（英文缩写）” | “读者习惯中文专有名词，必须写全称” | 常驻警示 🔴 |
+| E005 | 2026-03-22 | 社群快讯 | 条目间无空行，排版拥挤 | 每条资讯之间强制保留一行空行，增强呼吸感 | “手机端阅读太密集，加空行” | 已吸收并执行 🟢 |
+
+已重新生成排版规范的交付终稿。下周处理第 15 期周萃时，我将绝对遵守 E004 和 E005 规范！</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- 模块四：常见避坑指南与高手心法 -->
+    <section class="callout" style="background-color: #fefce8; border-color: #fef08a;">
+      <div class="callout-title" style="color: #854d0e;">💡 搭建新 AI 员工的高手心法（3 大避坑戒律）</div>
+      <div style="color: #713f12; line-height: 1.85;">
+        <p><strong>1. 戒“无样板盲写”</strong>：AI 产出的上限，完全取决于你在《原始资料》中放的“历史优秀成品样板”。样板越地道，新员工越老练。</p>
+        <p><strong>2. 戒“跨过错题本”</strong>：很多团队建完 AI 觉得没用，是因为 AI 不断犯同样的错。只有严格落实<strong>“每次执行必先读错题本”</strong>，AI 才会随时间沉淀复利价值。</p>
+        <p><strong>3. 戒“省略第 14 条人工核验”</strong>：大模型擅长组织语言，但偶尔会有数字幻觉。永远由人工花 30 秒核验文案中的<strong>价格、日期、规格</strong>，人机协作才万无一失。</p>
+      </div>
+    </section>
+
+    <!-- 页面导航 -->
+    <div class="page-nav-bar">
+      <a href="page5_skills_prompts.html" class="page-nav-btn">
+        <span>⬅ 上一篇：第五页 · 技能全貌与提示词全集</span>
+      </a>
+      <a href="index.html" class="page-nav-btn primary">
+        <span>🏠 返回首页 · 目录与思维逻辑总览</span>
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>AI 员工实战全景录 · 第六页：利用技能搭建全新 AI 员工 · 2026</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

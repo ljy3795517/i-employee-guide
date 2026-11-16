@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第四页 · 完整生命周期运行实战 - AI 员工实战教学</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 顶部导航栏 -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-badge">CHAPTER 04</span>
+        <span>AI 员工转化与实战全景录</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">首页·目录导览</a></li>
+        <li><a href="page1_story.html" class="nav-link">① 真实员工故事</a></li>
+        <li><a href="page2_mapping.html" class="nav-link">② 真人到 AI 映射</a></li>
+        <li><a href="page3_architecture.html" class="nav-link">③ 电脑里文件结构</a></li>
+        <li><a href="page4_lifecycle.html" class="nav-link active">④ 完整运行生命周期</a></li>
+        <li><a href="page5_skills_prompts.html" class="nav-link">⑤ 技能全貌与提示词</a></li>
+        <li><a href="page6_new_employee.html" class="nav-link">⑥ 搭建新 AI 员工</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main-wrapper">
+    <!-- Hero 标题 -->
+    <div class="hero-box">
+      <div class="chapter-badge">第四篇 · 完整生命周期</div>
+      <h1 class="hero-title">AI 员工的完整运行过程：输入·查找·实现·输出·反馈</h1>
+      <p class="hero-subtitle">
+        还原真实业务场景下一次完整的端到端运行：从每周一丢入生硬数据，到 AI 小晴加载错题起草，再到主管核查第 14 条核心数字，最终完成错题沉淀与闭环进化。
+      </p>
+    </div>
+
+    <!-- 运行全流程六步图 -->
+    <section>
+      <h2 class="section-title">🔄 端到端闭环：运行六大核心环节</h2>
+      <div class="grid-3">
+        <div class="card">
+          <span class="badge badge-blue" style="margin-bottom: 8px;">环节 1</span>
+          <h3 class="card-title">📥 输入准备 (Input)</h3>
+          <p class="card-text">
+            每周一将采购部的原始产品参数与排期写入 <code>原始资料/03_本周待处理数据.md</code>，准备真实数据输入。
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-purple" style="margin-bottom: 8px;">环节 2</span>
+          <h3 class="card-title">🔍 查找加载 (Retrieval)</h3>
+          <p class="card-text">
+            AI 小晴被唤起后，<strong>第一步先读取《04_错题本.md》</strong>，在思考链路中激活所有已知红线，调取品牌调性。
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-sage" style="margin-bottom: 8px;">环节 3</span>
+          <h3 class="card-title">⚙️ 实现生成 (Execution)</h3>
+          <p class="card-text">
+            严格按照《03_工作手册_SOP》提供的标准模板，将冰冷参数转化为小红书、微信、企微三套排版文案。
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-amber" style="margin-bottom: 8px;">环节 4</span>
+          <h3 class="card-title">📄 输出自检 (Output)</h3>
+          <p class="card-text">
+            AI 输出各渠道文案终稿草案，并在文末主动附上【关键数据 1:1 比对表】（原价、特惠价、尺寸、排期）。
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-red" style="margin-bottom: 8px;">环节 5</span>
+          <h3 class="card-title">👨‍💼 主管审核 (Audit)</h3>
+          <p class="card-text">
+            人类主管落实《一页检查清单》<strong>第 14 条（人工必验）</strong>，花 1 分钟核验所有价格与日期，杜绝商业事故。
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-green" style="margin-bottom: 8px;">环节 6</span>
+          <h3 class="card-title">🔁 反馈进化 (Feedback)</h3>
+          <p class="card-text">
+            主管提出修改意见，AI 修正正文并<strong>自动将新经验写入《04_错题本.md》</strong>，完成下周不再犯的自进化。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 实操演练：4 步标准操作指令 -->
+    <section>
+      <h2 class="section-title">⚡ 真实运行实操：Antigravity 4 步标准操作词</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 16px;">
+        在当前 Antigravity 聊天窗口中，按照以下操作词依次发送，即可完整跑通全流程：
+      </p>
+
+      <!-- 步骤 1 -->
+      <div class="code-container">
+        <div class="code-header">
+          <span>第一步：任务启动指令（粘贴到 Antigravity 聊天框）</span>
+          <button class="copy-btn" data-target="run-cmd-1">📋 复制第一步指令</button>
+        </div>
+        <pre><code id="run-cmd-1">请立即作为【小晴 - 晴川生活文案专员】执行本周任务：
+1. 先读取 ai_employee_office/04_错题本.md，在思考中明确本期需要遵守的全部规避准则；
+2. 读取 ai_employee_office/原始资料/03_本周待处理数据_第11期新品.md 的两款产品数据；
+3. 遵循 ai_employee_office/01_入职手册.md 的克制温润调性（零网络烂梗，感叹号整篇不超过 2 个）；
+4. 严格按照 ai_employee_office/03_工作手册_新品发布SOP.md 的标准模板，生成：
+   - 渠道一：小红书图文文案（3个备选标题 + 正文 + 规格清单 + 极简标签）
+   - 渠道二：微信公众号推文导语与故事
+   - 渠道三：企微社群新品闪购快讯
+5. 文末必须附上【关键数据 1:1 比对自检表】（核对原价、尝鲜价、规格尺寸、活动起止时间）。</code></pre>
+      </div>
+
+      <!-- 步骤 2 审核说明 -->
+      <div class="callout callout-warning">
+        <div class="callout-title">🔍 第二步：主管 1 分钟终审（核对清单第 14 条核心数据）</div>
+        <p style="color: var(--text-secondary);">
+          当 AI 吐出文案后，主管不要从头改病句，<strong>只需把目光聚焦在自检表中的关键数字</strong>：<br>
+          • 托盘日常价 ¥169，本周 ¥139？✔<br>
+          • 马克杯单只 ¥79，双只礼盒 ¥129？✔<br>
+          • 3月20日 20:00 开售，3月25日 24:00 截止？✔<br>
+          • 全文感叹号是否 ≤ 2 个？无网络烂梗？✔
+        </p>
+      </div>
+
+      <!-- 步骤 3 -->
+      <div class="code-container">
+        <div class="code-header">
+          <span>第三步：主管审核反馈指令（触发错题本自动学习与终稿归档）</span>
+          <button class="copy-btn" data-target="run-cmd-3">📋 复制第三步指令</button>
+        </div>
+        <pre><code id="run-cmd-3">文案已审阅，核心数据准确，但有两处细节需要优化：
+1. 小红书正文结尾的互动提问太像营销套路，改成询问读者的晨间生活习惯；
+2. 企微社群快讯中，把双只礼盒装的优惠金额【立省 ¥49】用括号加粗高亮。
+
+请执行两项操作：
+1. 输出修改后的终版文案，并保存到文件：ai_employee_office/输出成果/第11期_新品宣发文案终稿.md；
+2. 将这两条意见提炼为永久规范（E005、E006），追加写入到文件：ai_employee_office/04_错题本.md 的表格末尾。</code></pre>
+      </div>
+
+      <!-- 步骤 4 -->
+      <div class="code-container">
+        <div class="code-header">
+          <span>第四步：终端一键运行校验命令（在界面下方 Terminal 执行）</span>
+          <button class="copy-btn" data-target="run-cmd-4">📋 复制终端命令</button>
+        </div>
+        <pre><code id="run-cmd-4">python3 /Users/ljy919/Desktop/222/ai_employee_office/run_ai_employee.py</code></pre>
+      </div>
+    </section>
+
+    <!-- 运行效果实测呈现 -->
+    <section>
+      <h2 class="section-title">📊 最终运行结果：三渠道文案终稿展示</h2>
+      
+      <div class="grid-3">
+        <div class="card">
+          <span class="badge badge-red" style="margin-bottom: 8px;">小红书终稿</span>
+          <h4 style="margin-bottom: 8px;">晨光与木香的微小秩序</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;">
+            清晨醒来，窗帘拉开半掌宽的缝隙，阳光斜斜落在桌上。整块切削的黑胡桃木托盘边缘微反边，放上一只柴烧跳刀粗陶马克杯，温热的水汽缓缓升起。一握一放之间，日常的慌张归于安宁。<br><br>
+            <strong>互动：你清晨醒来后的第一件事，习惯是先拉开窗帘，还是先喝一杯温水？🌿</strong>
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-blue" style="margin-bottom: 8px;">微信导语终稿</span>
+          <h4 style="margin-bottom: 8px;">晴川新作｜晨光与木香</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;">
+            我们常常被日历催促着奔跑，唯有清晨最初的半小时属于自己。水壶低鸣，深褐色的木纹托盘稳稳托住咖啡杯与热面包。晴川第 11 期新作回归器物本质：北美原木年轮与高温还原粗陶，在平凡清晨托起你对生活的热忱。
+          </p>
+        </div>
+
+        <div class="card">
+          <span class="badge badge-green" style="margin-bottom: 8px;">企微社群终稿</span>
+          <h4 style="margin-bottom: 8px;">春日新作早知道</h4>
+          <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.7;">
+            各位晴川朋友，第 11 期新品已入库：<br>
+            🪵 <strong>黑胡桃木整木托盘</strong>：尝鲜 ¥139（原价 ¥169）<br>
+            ☕️ <strong>手工粗陶马克杯</strong>：尝鲜 ¥79（原价 ¥89）<br>
+            🎁 <strong>双色礼盒装特惠 ¥129（【立省 ¥49】，推荐）</strong><br>
+            ⏰ 3月20日 20:00 开售，现货48小时顺丰包邮。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 交互式检查清单 -->
+    <section>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin: 36px 0 16px;">
+        <h2 class="section-title" style="margin: 0;">✅ 交互式 15 项审核标准清单</h2>
+        <button id="resetChecklistBtn" class="copy-btn" style="background-color: #64748b;">重置勾选</button>
+      </div>
+
+      <div class="checklist-container">
+        <div class="checklist-group">
+          <div class="checklist-group-title">第一关：准备办公室与原始输入</div>
+          <label class="check-item"><input type="checkbox" id="c1"><span class="check-item-text">01. 建立专属工作文件夹（<code>ai_employee_office</code>）</span></label>
+          <label class="check-item"><input type="checkbox" id="c2"><span class="check-item-text">02. 归档历史优秀成品作为质量参考线</span></label>
+          <label class="check-item"><input type="checkbox" id="c3"><span class="check-item-text">03. 提供品牌介绍与调性排版规范</span></label>
+          <label class="check-item"><input type="checkbox" id="c4"><span class="check-item-text">04. 准备当期真实数据表格（无虚构数据）</span></label>
+        </div>
+
+        <div class="checklist-group">
+          <div class="checklist-group-title">第二关：建好员工与生成四本手册</div>
+          <label class="check-item"><input type="checkbox" id="c5"><span class="check-item-text">05. 技能 <code>ai-employee-setup</code> 安装就位</span></label>
+          <label class="check-item"><input type="checkbox" id="c6"><span class="check-item-text">06. 准确回答 AI 提出的 ≤3 个澄清问题</span></label>
+          <label class="check-item"><input type="checkbox" id="c7"><span class="check-item-text">07. 确认并通过 AI 给出的「一页计划」</span></label>
+          <label class="check-item"><input type="checkbox" id="c8"><span class="check-item-text">08. 四本手册（入职/设定/SOP/错题本）已完整落盘</span></label>
+        </div>
+
+        <div class="checklist-group">
+          <div class="checklist-group-title">第三关：日常运转与审阅闭环</div>
+          <label class="check-item"><input type="checkbox" id="c9"><span class="check-item-text">09. 每次任务启动前，AI 确认强制先读《04_错题本》</span></label>
+          <label class="check-item"><input type="checkbox" id="c10"><span class="check-item-text">10. 文案严格符合品牌调性，无网络烂梗，感叹号 ≤ 2</span></label>
+          <label class="check-item"><input type="checkbox" id="c11"><span class="check-item-text">11. 结构与格式 100% 遵照 SOP 标准模板</span></label>
+          <label class="check-item"><input type="checkbox" id="c12"><span class="check-item-text">12. 交付成果文末附带关键数据比对自检表</span></label>
+          <label class="check-item"><input type="checkbox" id="c13"><span class="check-item-text">13. 主管快速通读逻辑流畅度与语感</span></label>
+          <label class="check-item highlight"><input type="checkbox" id="c14"><span class="check-item-text" style="color:#92400e;"><strong>14. 【极其关键·人工必核】关键数字、价格与日期 1:1 比对</strong></span></label>
+          <label class="check-item"><input type="checkbox" id="c15"><span class="check-item-text">15. 主管意见回流追加至《04_错题本》，形成长效规则</span></label>
+        </div>
+      </div>
+    </section>
+
+    <!-- 页面导航 -->
+    <div class="page-nav-bar">
+      <a href="page3_architecture.html" class="page-nav-btn">
+        <span>⬅ 上一篇：第三页 · 电脑里的文件结构与内容</span>
+      </a>
+      <a href="page5_skills_prompts.html" class="page-nav-btn primary">
+        <span>下一篇：第五页 · 技能全貌与提示词全集</span>
+        <span>➔</span>
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>AI 员工实战全景录 · 第四页：完整生命周期运行实战 · 2026</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第二页 · 从真人到 AI 的映射转化 - AI 员工实战教学</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 顶部导航栏 -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-badge">CHAPTER 02</span>
+        <span>AI 员工转化与实战全景录</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">首页·目录导览</a></li>
+        <li><a href="page1_story.html" class="nav-link">① 真实员工故事</a></li>
+        <li><a href="page2_mapping.html" class="nav-link active">② 真人到 AI 映射</a></li>
+        <li><a href="page3_architecture.html" class="nav-link">③ 电脑里文件结构</a></li>
+        <li><a href="page4_lifecycle.html" class="nav-link">④ 完整运行生命周期</a></li>
+        <li><a href="page5_skills_prompts.html" class="nav-link">⑤ 技能全貌与提示词</a></li>
+        <li><a href="page6_new_employee.html" class="nav-link">⑥ 搭建新 AI 员工</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main-wrapper">
+    <!-- Hero 标题 -->
+    <div class="hero-box">
+      <div class="chapter-badge">第二篇 · 认知与架构转化</div>
+      <h1 class="hero-title">从员工小晴到 AI 小晴：体系化 1:1 映射实现</h1>
+      <p class="hero-subtitle">
+        为什么普通人直接对大模型提问总是失败？因为他们只剥离了“打字”动作，却剥夺了员工赖以生存的工作环境。本文拆解真人小晴的五大能力如何精准映射到 AI 系统中。
+      </p>
+    </div>
+
+    <!-- 为什么普通 Prompt 搞不定 -->
+    <section>
+      <h2 class="section-title">⚠️ 根源分析：传统 Prompt 为什么必然翻车？</h2>
+      <div class="grid-2">
+        <div class="card" style="border-top: 4px solid var(--accent-red);">
+          <h3 class="card-title" style="color: var(--accent-red);">传统单次 Prompt（把 AI 当算盘）</h3>
+          <p class="card-text">
+            用户打开聊天框，输入：“写一篇关于黑胡桃木托盘和粗陶杯的小红书文案”。<br>
+            这相当于主管把一个实习生叫进办公室，<strong>没收她所有的品牌手册、SOP流程和错题本，直接命令她凭空背诵</strong>。结果必然是 AI 满嘴“绝绝子”、“家人们”，甚至捏造价格和日期。
+          </p>
+        </div>
+        <div class="card" style="border-top: 4px solid var(--accent-sage);">
+          <h3 class="card-title" style="color: var(--accent-sage);">AI 员工架构（为 AI 还原工位与环境）</h3>
+          <p class="card-text">
+            我们不在对话框里临时念叨，而是在电脑里为 AI 搭建专属“办公室”，配备：<br>
+            <strong>入职手册</strong>（约束下限） + <strong>员工设定</strong>（规范行为） + <strong>SOP 手册</strong>（统一模板） + <strong>错题本</strong>（记忆进化）。AI 像真人小晴一样，戴上耳机按规矩做事。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 核心映射大盘表 -->
+    <section>
+      <h2 class="section-title">🔄 映射全景大盘：真人小晴 vs AI 小晴</h2>
+      <div class="table-wrapper">
+        <table>
+          <thead>
+            <tr>
+              <th style="width: 20%;">员工小晴的现实要素</th>
+              <th style="width: 25%;">人类大脑的实际工作机制</th>
+              <th style="width: 25%;">映射到 AI 的技术载体</th>
+              <th style="width: 30%;">在 AI 系统中的具体实现原理</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>1. 品牌常识与底线</strong></td>
+              <td>入职培训熏陶，知道品牌温润克制，绝不说粗鄙烂梗</td>
+              <td><code>01_入职手册.md</code></td>
+              <td><strong>Guardrails（硬约束护栏）</strong>：明确列出负向词库（禁绝绝子/家人们）与标点上限，从概率上锁死输出下限。</td>
+            </tr>
+            <tr>
+              <td><strong>2. 职业素养与习惯</strong></td>
+              <td>明确自己是文案专员，知道动手前先翻笔记，对主管要礼貌汇报</td>
+              <td><code>02_员工设定.md</code></td>
+              <td><strong>Persona & System Protocol</strong>：确立角色定位，在思考链路中固化“先读错题本、按模板执行、交付必附自检表”的行为准则。</td>
+            </tr>
+            <tr>
+              <td><strong>3. 交付版式与工序</strong></td>
+              <td>按各平台规范排版（小红书3标题、微信散文导言、社群重点）</td>
+              <td><code>03_工作手册_SOP.md</code></td>
+              <td><strong>Deterministic Pipeline（确定性模板）</strong>：将混沌生成限制在固定模块中，确保每次交付格式 100% 结构化可读。</td>
+            </tr>
+            <tr>
+              <td><strong>4. 避错小本子</strong></td>
+              <td>挨批后记在便签上的惨痛教训，每次动笔前先过一遍防踩雷</td>
+              <td><code>04_错题本.md</code></td>
+              <td><strong>Few-shot Negative Memory（外挂持久化记忆）</strong>：用磁盘表格存储主管偏好与避坑规则，弥补大模型会话重启失忆的致命缺陷。</td>
+            </tr>
+            <tr>
+              <td><strong>5. 关键数据核对表</strong></td>
+              <td>写完后拿出草稿纸，把价格、规格、时间 1:1 比对打勾</td>
+              <td><code>SOP 自检对照表</code></td>
+              <td><strong>Self-Reflection（模型自省输出）</strong>：强制 AI 将正文中的数字与原始数据进行字段级比对，向主管证明已做检查。</td>
+            </tr>
+            <tr>
+              <td><strong>6. 主管的最后把关</strong></td>
+              <td>主管花 1 分钟快速核验数字，提出微小修改意见</td>
+              <td><code>一页检查清单第 14 条</code></td>
+              <td><strong>Human-in-the-loop（人机协同安全阀）</strong>：承认 AI 对数字的幻觉概率，人类专职负责最后一道防线，实现零事故。</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 深入剖析三大映射飞跃 -->
+    <section>
+      <h2 class="section-title">💡 深度剖析：三大质的飞跃</h2>
+      
+      <div class="grid-3">
+        <div class="card">
+          <div class="card-icon" style="background-color: var(--accent-sage-light); color: var(--accent-sage);">1</div>
+          <h3 class="card-title">飞跃一：从正向引导到负向锁死</h3>
+          <p class="card-text">
+            普通人教 AI 总说“请写得高级、有文化”。这很主观，AI 无法理解。
+            <br>真实小晴的入职手册给出了<strong>极度具体的负向清单</strong>：“严禁感叹号超2个”、“禁用绝绝子”。计算机最擅长遵守否定规则，负向约束直接带来 10 倍的调性稳定性。
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" style="background-color: var(--accent-blue-light); color: var(--accent-blue);">2</div>
+          <h3 class="card-title">飞跃二：从金鱼记忆到外挂磁盘</h3>
+          <p class="card-text">
+            真实小晴下周上班不会失忆，是因为她有小本子。
+            <br>AI 小晴把小本子变成了磁盘上的 <code>04_错题本.md</code>。主管的每一句批评，不再随对话清空消失，而是被提炼成永久数据行。<strong>这不是微调大模型，而是低成本的上下文增强（RAG/Few-shot）</strong>。
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="card-icon" style="background-color: var(--accent-warm-light); color: var(--accent-warm);">3</div>
+          <h3 class="card-title">飞跃三：从全盘审查到只看第 14 条</h3>
+          <p class="card-text">
+            过去主管审核文案要从头读到尾，修改病句和排版。
+            <br>映射后的体系中，入职手册和 SOP 已经保障了 90% 的文字质量。主管只需聚焦在<strong>《检查清单》第 14 条——比对价格、日期、规格</strong>。人类审核从 30 分钟降至 1 分钟。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 映射总结 -->
+    <section class="callout">
+      <div class="callout-title">📌 结论：让 AI 像人一样工作，就要给它像人一样的基础设施</div>
+      <p style="color: var(--text-secondary);">
+        当我们把真实小晴的“大脑规矩、工作工序、避错备忘、自检核对”完整拆解并赋予 AI 时，AI 就不再是一个玩具，而真正成为了<strong>一个拥有固定行为准则、能够吃一堑长一智的数字化员工</strong>。
+      </p>
+    </section>
+
+    <!-- 页面导航 -->
+    <div class="page-nav-bar">
+      <a href="page1_story.html" class="page-nav-btn">
+        <span>⬅ 上一篇：第一页 · 真实员工小晴的故事</span>
+      </a>
+      <a href="page3_architecture.html" class="page-nav-btn primary">
+        <span>下一篇：第三页 · 电脑里的文件结构与内容</span>
+        <span>➔</span>
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>AI 员工实战全景录 · 第二页：从真人到 AI 的映射转化 · 2026</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

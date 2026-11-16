@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>第五页 · 技能全貌与提示词全集 - AI 员工实战教学</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 顶部导航栏 -->
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-badge">CHAPTER 05</span>
+        <span>AI 员工转化与实战全景录</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="nav-link">首页·目录导览</a></li>
+        <li><a href="page1_story.html" class="nav-link">① 真实员工故事</a></li>
+        <li><a href="page2_mapping.html" class="nav-link">② 真人到 AI 映射</a></li>
+        <li><a href="page3_architecture.html" class="nav-link">③ 电脑里文件结构</a></li>
+        <li><a href="page4_lifecycle.html" class="nav-link">④ 完整运行生命周期</a></li>
+        <li><a href="page5_skills_prompts.html" class="nav-link active">⑤ 技能全貌与提示词</a></li>
+        <li><a href="page6_new_employee.html" class="nav-link">⑥ 搭建新 AI 员工</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="main-wrapper">
+    <!-- Hero 标题 -->
+    <div class="hero-box">
+      <div class="chapter-badge">第五篇 · 技能与指令全集</div>
+      <h1 class="hero-title">技能整体全貌、存入使用方式与输入提示词全集</h1>
+      <p class="hero-subtitle">
+        毫无遗漏展示 <code>ai-employee-setup</code> 技能的完整代码、在三大环境中的存入与调用方法，以及从建构、生成、执行、审阅到自进化的全套输入提示词全貌。
+      </p>
+    </div>
+
+    <!-- 模块一：技能的整体全貌与存入使用 -->
+    <section style="margin-bottom: 48px;">
+      <h2 class="section-title">⚙️ 模块一：ai-employee-setup 技能整体全貌</h2>
+      
+      <!-- 技能源码展示 -->
+      <div class="code-container">
+        <div class="code-header">
+          <span>.agents/skills/ai-employee-setup/SKILL.md（完整源码·无任何缩减）</span>
+          <button class="copy-btn" data-target="full-skill-code">📋 复制完整技能代码</button>
+        </div>
+        <pre><code id="full-skill-code">---
+name: ai-employee-setup
+description: 从零搭建一个专属 AI 员工。读取当前工作目录资料，询问不超过3个关键问题，生成实施计划，并在用户确认后创建入职手册、员工设定、工作手册(SOP)与错题本。
+---
+
+# AI 员工构建技能 (AI Employee Setup Skill)
+
+你是一个资深组织流程与自动化专家，擅长将重复、固定的业务流程转化为标准化的「AI 员工工作体系」。
+
+## 核心任务
+你的目标是帮助用户把一项每周或每天重复的工作彻底交给 AI 员工接管。你负责将这项工作体系化，为用户搭建包含「四本核心手册」的 AI 员工运行环境。
+**注意：本 Skill 仅负责搭建与初始化 AI 员工系统，不负责直接执行当周的具体业务。**
+
+---
+
+## 执行步骤与规范
+
+### 第一步：扫描与理解（Scan & Understand）
+1. 自动读取并分析当前工作区（或用户指定文件夹）内的所有文件：
+   - 品牌/公司背景介绍、视觉或文案规范
+   - 历史往期优秀作品或最终成品（作为质量基准线）
+   - 本次或每周需要处理的原始输入资料/表格
+2. 梳理出该项工作的核心流程：输入源是什么、输出格式是什么、业务约束与红线是什么。
+
+### 第二步：精准提问（Ask ≤ 3 Questions）
+- **严格限制**：最多向用户提出 **3 个** 最核心、最关键且无法直接从已有文件中获知的问题。
+- 提问方向通常包括：
+  1. 该工作的最终受众与主要交付载体（例如：发布在哪个平台、受众是谁）；
+  2. 负责人（管理者）在过往审阅中最常踩坑或最在意的质量红线；
+  3. 每周固定交付的时间节点与成果格式偏好。
+
+### 第三步：一页计划（One-Page Plan）
+在获得用户回答（或确认资料完整）后，生成且仅生成一份精炼的「一页计划」，等待用户确认。计划包含：
+1. **员工身份与定位**：名称、职务、汇报对象、职责边界。
+2. **入职手册框架**：品牌核心价值、调性原则、绝对红线与禁忌词。
+3. **工作手册（SOP）流程**：输入资料解析 -> 检查错题本 -> 执行生成 -> 关键数据核对 -> 最终交付。
+4. **错题本初始化规则**：根据往期教训预置的纠偏要点。
+5. **确认提示**：明确告知用户「若方案满意，请回复 OK，我将为您正式生成四本核心手册」。
+
+### 第四步：落地生成四本核心文件（Scaffold 4 Handbooks）
+当且仅当用户回复确认（如“OK”、“开始生成”等）后，在当前目录创建以下 4 个标准文件：
+
+1. `01_入职手册.md`
+   - 公司/品牌背景与产品概览
+   - 品牌调性（Voice & Tone）与语言风格指南
+   - 违禁词库与绝对禁止事项
+   - 专业名词术语表
+
+2. `02_员工设定.md`
+   - 员工角色定位（如：内容运营专员、数据周报助理）
+   - 思考链路与行为准则（严谨、诚实、遵循指令、不自作主张）
+   - 交互规范：如何向管理者汇报、交付格式与自检说明
+
+3. `03_工作手册_SOP.md`
+   - 任务全生命周期 SOP（输入准备 -> 预检 -> 生成 -> 自检 -> 交付）
+   - 各种交付格式的标准模板（含结构、字数、排版规范）
+   - 逐项核对表（特别是数字、日期、价格与原始材料的 1:1 核对）
+
+4. `04_错题本.md`
+   - 错误追踪表结构：编号、记录日期、错误表现、正确做法、管理者评语、状态
+   - 初始预置 2~3 条根据以往经验提炼的常见易错点
+   - 使用规则：每次执行任务前必须完整加载，严格避免重犯；每次人工审阅提出修改后，必须把新意见追加在此
+
+### 第五步：交接与运行指引
+完成文件创建后，向用户提供清晰的后续使用说明：
+- 如何开启新会话唤起 AI 员工（如：`@员工设定` 并指定 `$工作手册`）；
+- 如何把每周原始资料交给它处理；
+- 如何对照《一页检查清单》（尤其是第 14 条数字/日期/价格人工核验）进行最终审阅。</code></pre>
+      </div>
+
+      <!-- 技能存入方式详细介绍 -->
+      <h3 style="font-size: 1.25rem; font-weight: 700; margin: 28px 0 16px; color: var(--text-primary);">📁 技能的存入方式详细介绍（三大环境）</h3>
+      <div class="grid-3">
+        <div class="card">
+          <div class="badge badge-purple" style="margin-bottom: 8px;">环境 1 · Codex 桌面版</div>
+          <h4 style="margin-bottom: 8px;">Codex 桌面客户端</h4>
+          <p class="card-text" style="font-size: 0.92rem;">
+            <strong>存入路径</strong>：<br>
+            <code>你的工作文件夹/.agents/skills/ai-employee-setup/SKILL.md</code><br><br>
+            <strong>权限配置</strong>：<br>
+            在 Codex 中选择打开该工作文件夹，在权限弹窗中勾选“帮我批准（Auto-approve）”，允许读写文件。
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="badge badge-blue" style="margin-bottom: 8px;">环境 2 · Claude Code</div>
+          <h4 style="margin-bottom: 8px;">Claude Code 命令行</h4>
+          <p class="card-text" style="font-size: 0.92rem;">
+            <strong>存入路径</strong>：<br>
+            <code>你的专案目录/.claude/skills/ai-employee-setup/SKILL.md</code><br><br>
+            <strong>自动加载</strong>：<br>
+            启动 Claude Code 终端会话时，会自动读取 <code>.claude/skills</code> 目录下的技能定义。
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="badge badge-green" style="margin-bottom: 8px;">环境 3 · Google Antigravity</div>
+          <h4 style="margin-bottom: 8px;">Antigravity IDE</h4>
+          <p class="card-text" style="font-size: 0.92rem;">
+            <strong>存入路径</strong>：<br>
+            <code>当前工作区/.agents/skills/ai-employee-setup/SKILL.md</code><br><br>
+            <strong>原生集成</strong>：<br>
+            Antigravity 原生支持技能发现机制，无需编译，只要文件就位即刻处于可随时调用状态。
+          </p>
+        </div>
+      </div>
+
+      <!-- 技能使用方式详细介绍 -->
+      <h3 style="font-size: 1.25rem; font-weight: 700; margin: 28px 0 16px; color: var(--text-primary);">🚀 技能的使用方式详细介绍</h3>
+      <div class="story-narrative">
+        <p><strong>1. 查看技能是否就绪</strong>：在支持技能的输入框中输入 <code>$</code> 符号，系统会自动弹出技能列表。如果你看到 <code>$ai-employee-setup</code>，证明技能已成功加载。</p>
+        <p><strong>2. 召唤技能启动建构</strong>：在对话框输入下方标准指令（见第二模块步骤一），技能会立即自动调用扫描工具读取工作区文件。</p>
+        <p><strong>3. 互动确认机制</strong>：技能严格遵守“最多提问 3 个问题”规则，并输出精简的“一页计划”。你必须回复“OK”或做出确认，技能才会真正向磁盘写入四本手册，绝不擅自越权乱写。</p>
+      </div>
+    </section>
+
+    <!-- 模块二：输入提示词全貌（按步骤零遗漏） -->
+    <section>
+      <h2 class="section-title">📋 模块二：输入提示词全貌（按步骤全量呈现·零遗漏）</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 20px;">
+        从零搭建 AI 员工，到日常周度任务执行与终审迭代，以下是<strong>全部生命周期中需要用到的全部输入提示词</strong>。已按使用先后顺序排定：
+      </p>
+
+      <!-- 步骤一 -->
+      <div class="code-container">
+        <div class="code-header">
+          <span>步骤 1：首次搭建与诊断提示词（Agent 客户端：Codex / Antigravity）</span>
+          <button class="copy-btn" data-target="p-step1">📋 复制步骤 1 提示词</button>
+        </div>
+        <pre><code id="p-step1">使用 $ai-employee-setup，读目前资料夹，帮我建一个 AI 员工，把我的一件重复工作交给它。
+请先读取我当前工作目录中的品牌背景与历史资料，梳理流程，向我提出最多 3 个最关键的问题，并输出一份一页计划。</code></pre>
+      </div>
+
+      <!-- 步骤一（网页版备用） -->
+      <div class="code-container">
+        <div class="code-header">
+          <span>步骤 1-备选：首次搭建与诊断提示词（网页版：ChatGPT / Claude）</span>
+          <button class="copy-btn" data-target="p-step1-web">📋 复制网页版步骤 1 提示词</button>
+        </div>
+        <pre><code id="p-step1-web">你是一名资深的组织流程与自动化架构专家。
+我现在想把一件每周都要重复执行的工作：“<你的工作，例如：晴川生活每周新品上市宣发文案>”，彻底交接给一个专属的 AI 员工。
+
+以下是我为你提供的背景资料、规范要求、历史优秀成品以及本周需要处理的原始数据：
+【参考资料开始】
+（请在此处直接粘贴：品牌背景规范、历史往期优质作品参考、本周原始数据等）
+【参考资料结束】
+
+请你执行以下两件事：
+1. 快速分析以上资料，梳理这件工作的输入、输出和业务规则。
+2. 如果有关键信息缺失，请向我提出【最多 3 个】最核心、最影响交付质量的问题。
+3. 根据资料与你的推断，为我输出一份精简的「一页实施计划」，包含：
+   - AI 员工的身份与职责定义
+   - 入职手册核心要点（调性、禁忌）
+   - 工作手册（SOP）的标准流转步骤
+   - 错题本预置的避坑规则
+4. 在结尾提示我：如果认可该计划，请回复“OK”，你将为我正式生成《01_入职手册》、《02_员工设定》、《03_工作手册_SOP》与《04_错题本》。</code></pre>
+      </div>
+
+      <!-- 步骤二 -->
+      <div class="code-container">
+        <div class="code-header">
+          <span>步骤 2：一页计划确认与生成四本手册提示词</span>
+          <button class="copy-btn" data-target="p-step2">📋 复制步骤 2 提示词</button>
+        </div>
+        <pre><code id="p-step2">一页计划我已确认（或我对问题的回答如下：[填写你的补充回答]）。
+请立即为我完整输出这名 AI 员工的四本核心手册。请分别使用明确的 Markdown 代码块输出，以便我单独复制保存到本地：
+
+1.《01_入职手册.md》：包含品牌/公司背景、核心理念、语言调性指南（Voice & Tone）、绝对禁止事项与黑名单词库。
+2.《02_员工设定.md》：包含该员工的姓名、职位角色、思考链路、交互行为规范与交付汇报格式。
+3.《03_工作手册_SOP.md》：包含该项任务的标准作业程序（输入解析 -> 规避错题本 -> 执行生成 -> 逐项核对 -> 最终交付），提供规范的输出模板与自查清单。
+4.《04_错题本.md》：包含表格结构的纠偏记录表（编号、日期、错误表现、正确做法、管理者评语、状态），并预置 2~3 条根据你对该岗位的理解提炼的高频易错避坑准则。</code></pre>
+      </div>
+
+      <!-- 步骤三 -->
+      <div class="code-container">
+        <div class="code-header">
+          <span>步骤 3：AI 员工日常周度任务执行提示词（Antigravity 唤起小晴）</span>
+          <button class="copy-btn" data-target="p-step3">📋 复制步骤 3 提示词</button>
+        </div>
+        <pre><code id="p-step3">请立即作为【小晴 - 晴川生活文案专员】执行本周任务：
+1. 先读取 ai_employee_office/04_错题本.md，在思考中明确本期需要遵守的全部规避准则；
+2. 读取 ai_employee_office/原始资料/03_本周待处理数据_第11期新品.md 的两款产品数据；
+3. 遵循 ai_employee_office/01_入职手册.md 的克制温润调性（零网络烂梗，感叹号整篇不超过 2 个）；
+4. 严格按照 ai_employee_office/03_工作手册_新品发布SOP.md 的标准模板，生成：
+   - 渠道一：小红书图文文案（3个备选标题 + 正文 + 规格清单 + 极简标签）
+   - 渠道二：微信公众号推文导语与故事
+   - 渠道三：企微社群新品闪购快讯
+5. 文末必须附上【关键数据 1:1 比对自检表】（核对原价、尝鲜价、规格尺寸、活动起止时间）。</code></pre>
+      </div>
+
+      <!-- 步骤三（网页版备用） -->
+      <div class="code-container">
+        <div class="code-header">
+          <span>步骤 3-备选：日常周度任务执行提示词（网页版直接贴料执行）</span>
+          <button class="copy-btn" data-target="p-step3-web">📋 复制网页版日常提示词</button>
+        </div>
+        <pre><code id="p-step3-web">现在你正式作为【小晴 - 晴川生活文案专员】上岗工作。
+
+你的行为规则如下：
+1. 严格遵守你对应的《01_入职手册》调性与《02_员工设定》。
+2. 必须先仔细阅读《04_错题本》，在本次生成中坚决不犯里面记录的任何错误。
+3. 严格按照《03_工作手册_SOP》的流程与标准模板进行输出。
+4. 在交付正文后，附上一段【自我核查清单说明】，明确说明关键价格、日期、规格参数与原始数据的对应关系。
+
+以下是你的核心工作手册背景与本周任务数据：
+【01_入职手册要点】
+（粘贴入职手册核心内容）
+
+【04_错题本内容】
+（粘贴最新的错题本内容）
+
+【本周待处理原始数据】
+（粘贴本周真实的产品参数、价格、活动时间等原始信息）
+
+请按照 SOP 模板，为我生成本周的交付成果草稿。</code></pre>
+      </div>
+
+      <!-- 步骤四 -->
+      <div class="code-container">
+        <div class="code-header">
+          <span>步骤 4：主管审阅反馈与错题本自动追加提示词（核心闭环）</span>
+          <button class="copy-btn" data-target="p-step4">📋 复制步骤 4 提示词</button>
+        </div>
+        <pre><code id="p-step4">文案已审阅，核心数据准确，但有两处细节需要优化：
+1. 小红书正文结尾的互动提问太像营销套路，改成询问读者的晨间生活习惯；
+2. 企微社群快讯中，把双只礼盒装的优惠金额【立省 ¥49】用括号加粗高亮。
+
+请执行两项操作：
+1. 输出修改后的终版文案，并保存到文件：ai_employee_office/输出成果/第11期_新品宣发文案终稿.md；
+2. 将这两条意见提炼为永久规范（E005、E006），追加写入到文件：ai_employee_office/04_错题本.md 的表格末尾。</code></pre>
+      </div>
+
+      <!-- 步骤五 -->
+      <div class="code-container">
+        <div class="code-header">
+          <span>步骤 5：新一期业务复用提示词（例如第 12 期新品来临）</span>
+          <button class="copy-btn" data-target="p-step5">📋 复制新周期复用提示词</button>
+        </div>
+        <pre><code id="p-step5">小晴，第 12 期的新品原始数据已更新在 `ai_employee_office/原始资料/本周待处理数据.md` 中。
+请继续执行你的岗位职责：
+1. 先阅读最新的《04_错题本.md》（重点温习 E005 互动方式与 E006 优惠突出规则）；
+2. 按照《03_工作手册_SOP.md》生成第 12 期的三渠道文案草稿；
+3. 输出第 12 期的关键数据 1:1 比对表。</code></pre>
+      </div>
+
+      <!-- 步骤六 -->
+      <div class="code-container">
+        <div class="code-header">
+          <span>步骤 6：终端一键自动化复核命令（Terminal 运行）</span>
+          <button class="copy-btn" data-target="p-step6">📋 复制终端复核命令</button>
+        </div>
+        <pre><code id="p-step6">python3 /Users/ljy919/Desktop/222/ai_employee_office/run_ai_employee.py</code></pre>
+      </div>
+    </section>
+
+    <!-- 页面导航 -->
+    <div class="page-nav-bar">
+      <a href="page4_lifecycle.html" class="page-nav-btn">
+        <span>⬅ 上一篇：第四页 · 完整生命周期运行实战</span>
+      </a>
+      <a href="page6_new_employee.html" class="page-nav-btn primary">
+        <span>下一篇：第六页 · 利用技能搭建全新 AI 员工</span>
+        <span>➔</span>
+      </a>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>AI 员工实战全景录 · 第五页：技能全貌与提示词全集 · 2026</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
